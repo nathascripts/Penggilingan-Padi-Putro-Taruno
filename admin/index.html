@@ -1,0 +1,113 @@
+<?php
+session_start();
+if (!isset($_SESSION['admin'])) {
+    header("Location: login.php");
+    exit;
+}
+
+include '../db.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $id = $_POST['id'];
+    $table = $_POST['table'];
+    $harga = $_POST['harga'];
+
+    if ($table == "padi") {
+        $sql = "UPDATE padi SET harga='$harga' WHERE id='$id'";
+    } else {
+        $sql = "UPDATE beras SET harga='$harga' WHERE id='$id'";
+    }
+
+    if ($conn->query($sql) === TRUE) {
+        $message = "Harga berhasil diubah";
+    } else {
+        $message = "Error: " . $conn->error;
+    }
+}
+
+$padi = $conn->query("SELECT * FROM padi");
+$beras = $conn->query("SELECT * FROM beras");
+$orders = $conn->query("SELECT * FROM pemesanan");
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Admin Panel</h2>
+    <?php if(isset($message)) echo "<p>$message</p>"; ?>
+
+    <a href="https://panelharga.badanpangan.go.id/" target="_blank">Go to Badan Pangan Nasional</a>
+
+    <h3>Jenis Padi</h3>
+    <table>
+        <tr>
+            <th>Nama</th>
+            <th>Harga</th>
+            <th>Ubah Harga</th>
+        </tr>
+        <?php while($row = $padi->fetch_assoc()) { ?>
+        <tr>
+            <td><?php echo $row['nama']; ?></td>
+            <td><?php echo $row['harga']; ?></td>
+            <td>
+                <form method="post" action="">
+                    <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                    <input type="hidden" name="table" value="padi">
+                    <input type="text" name="harga" value="<?php echo $row['harga']; ?>">
+                    <input type="submit" value="Update">
+                </form>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+
+    <h3>Jenis Beras</h3>
+    <table>
+        <tr>
+            <th>Nama</th>
+            <th>Harga</th>
+            <th>Ubah Harga</th>
+        </tr>
+        <?php while($row = $beras->fetch_assoc()) { ?>
+        <tr>
+            <td><?php echo $row['nama']; ?></td>
+            <td><?php echo $row['harga']; ?></td>
+            <td>
+                <form method="post" action="">
+                    <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                    <input type="hidden" name="table" value="beras">
+                    <input type="text" name="harga" value="<?php echo $row['harga']; ?>">
+                    <input type="submit" value="Update">
+                </form>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+
+    <h3>Pesanan Pelanggan</h3>
+    <table>
+        <tr>
+            <th>Nama</th>
+            <th>Nomor WhatsApp</th>
+            <th>Jenis</th>
+            <th>Jumlah</th>
+            <th>Alamat</th>
+        </tr>
+        <?php while($row = $pemesanan->fetch_assoc()) { ?>
+        <tr>
+            <td><?php echo $row['nama']; ?></td>
+            <td><?php echo $row['hp']; ?></td>
+            <td><?php echo $row['jenis']; ?></td>
+            <td><?php echo $row['jumlah']; ?></td>
+            <td><?php echo $row['alamat']; ?></td>
+        </tr>
+        <?php } ?>
+    </table>
+
+    <a href="logout.php">Logout</a>
+</body>
+</html>

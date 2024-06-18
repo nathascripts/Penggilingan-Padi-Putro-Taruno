@@ -1,0 +1,431 @@
+<?php
+  include '../db.php';
+
+  $padi = $conn->query("SELECT * FROM padi");
+  $beras = $conn->query("SELECT * FROM beras");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Penggilingan Padi Putro Taruno Baru</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/padile-touch-icon.png" rel="padile-touch-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+ </head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.php"><center>Penggilingan Padi<br>Putro Taruno</center></a></a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">Profil</a></li>
+          <li><a class="nav-link scrollto" href="#Proses">Proses</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Harga</a></li>
+          <li><a class="nav-link scrollto" href="#faq">Pertanyaan</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Pemesanan</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container"> 
+      <h1>PENGGILINGAN PADI PUTRO TARUNO</h1>
+      <h2>Tumbuhkan Kesejahteraan, Sajikan Kualitas</h2>
+      <a href="#about" class="btn-get-started scrollto">Mulai</a>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Profil</h2>
+                <h3>Profil Perusahaan</h3>
+                <p>Tumbuhkan Kesejahteraan, Sajikan Kualitas</p>
+            </div>
+
+            <div class="row content">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <br>
+                        <img src="gambar/profil1.jpg" alt="Profil Putro Taruno" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="col-md-8">
+                        <h4 class="my-3">Tumbuhkan Kesejahteraan, Sajikan Kualitas</h4>
+                        <p class="text-muted">
+                            Penggilingan Padi Putro Taruno adalah penggilingan padi yang berkomitmen untuk memberikan produk berkualitas dan layanan terbaik kepada pelanggan.
+                            Didirikan sejak tahun 2000, kami telah menjadi mitra terpercaya bagi petani lokal, memungkinkan kami menghasilkan beras berkualitas tinggi.
+                            Dengan pengalaman lebih dari dua dekade, kami terus meningkatkan teknologi dan metode penggilingan untuk memastikan setiap butir beras memenuhi standar kualitas yang ketat.
+                            Kami percaya bahwa hubungan yang erat dengan petani lokal adalah kunci keberhasilan kami dalam menyediakan beras terbaik bagi pelanggan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </section>
+
+     <!-- harga-terbaru-->
+     <section id="Proses" class="Proses"></section>
+     <section class="page-section" id="harga-terbaru">
+      <div class="container">
+        <div class="section-title">
+          <h2>Proses</h2>
+          <h3>Penggilingan Padi</h3>
+        </div>
+          <ul class="timeline">
+              <li>
+                  <div class="timeline-image"><img class="rounded-circle img-fluid" src="gambar/proses/1.jpg" alt="..." /></div>
+                  <div class="timeline-panel">
+                      <div class="timeline-heading">
+                          <h4>1</h4>
+                          <h4 class="subheading">Pengeringan Padi</h4>
+                      </div>
+                      <div class="timeline-body"><p class="text-muted">Padi yang masih basah, dikeringkan di bawah sinar matahari atau di dalam oven sampai benar-benar kering untuk diilakukan penggilingan. </p></div>
+                  </div>
+              </li>
+              <li class="timeline-inverted">
+                  <div class="timeline-image"><img class="rounded-circle img-fluid" src="gambar/proses/2.jpg" alt="..." /></div>
+                  <div class="timeline-panel">
+                      <div class="timeline-heading">
+                          <h4>2</h4>
+                          <h4 class="subheading">Penggilingan Padi</h4>
+                      </div>
+                      <div class="timeline-body"><p class="text-muted">Setelah padi dikeringkan, padi dimasukkan ke dalam mesin penggiling yang bertujuan untuk memisahkan kulit, beras, dan dedak.</p></div>
+                  </div>
+              </li>
+              <li>
+                  <div class="timeline-image"><img class="rounded-circle img-fluid" src="gambar/proses/3.jpg" alt="..." /></div>
+                  <div class="timeline-panel">
+                      <div class="timeline-heading">
+                          <h4>3</h4>
+                          <h4 class="subheading">Pengupasan Kulit Padi</h4>
+                      </div>
+                      <div class="timeline-body"><p class="text-muted">Proses ini melibatkan pengupasan kulit padi yang disebut sekam. Pengupasan dilakukan untuk menghilangkan sekam dan menghasilkan beras bulir utuh yang kemudian siap untuk diputihkan.</p></div>
+                  </div>
+              </li>
+              <li class="timeline-inverted">
+                  <div class="timeline-image"><img class="rounded-circle img-fluid" src="gambar/proses/5.jpg" alt="..." /></div>
+                  <div class="timeline-panel">
+                      <div class="timeline-heading">
+                          <h4>4</h4>
+                          <h4 class="subheading">Pemutihan Beras</h4>
+                      </div>
+                      <div class="timeline-body"><p class="text-muted">Beras yang digiling dicuci dan diputihkan untuk menghilangkan kotoran atau sisa-sisa kulit padi yang masih menempel.</p></div>
+                  </div>
+              </li>
+              <li class="timeline-inverted">
+                  <div class="timeline-image">
+                      <h4>
+                          Beras
+                          <br />
+                          Siap
+                          <br />
+                          Dipasarkan
+                      </h4>
+                  </div>
+              </li>
+          </ul>
+      </div>
+  </section>
+
+    <!-- ======= Informasi Lanjut ======= -->
+    <section id="wa" class="wa"></section>
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="text-center">
+          <h3>Hubungi Kami untuk informasi lebih lanjut</h3>
+          <a class="cta-btn btn-dark btn-social mx-2" href="https://wa.me/6281326288149" target="_blank">
+            <i class="fab fa-whatsapp"></i> <i>WhatsApp</i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Harga</h2>
+          <h3>Harga Terbaru</h3>
+          <p>Berikut adalah berbagai jenis padi dan beras dengan harga yang sesuai ketentuan pemerintah</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">Semua</li>
+              <li data-filter=".filter-padi">Harga Padi</li>
+              <li data-filter=".filter-beras">Harga Beras</li>
+              
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-padi">
+            <img src="gambar/padi64.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Padi IR 64</h4>
+              <?php $row = $padi->fetch_assoc(); ?>
+                <p><?php echo $row['harga']; ?></p>
+              <a href="gambar/gbh64.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Padi IR 64"><i class="bx bx-dots-horizontal-rounded"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-padi">
+            <img src="gambar/padimentik.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Padi Mentik</h4>
+              <?php $row = $padi->fetch_assoc(); ?>
+                <p><?php echo $row['harga']; ?></p>
+              <a href="gambar/gbhmentik.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Padi Mentik"><i class="bx bx-dots-horizontal-rounded"></i></a>
+              </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-beras">
+            <img src="gambar/Beras64.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Beras 64</h4>
+              <?php $row = $beras->fetch_assoc(); ?>
+              <p><?php echo $row['harga']; ?></p>
+              <a href="gambar/Beras_64.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Beras IR 64"><i class="bx bx-dots-horizontal-rounded"></i></a>
+              </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-padi">
+            <img src="gambar/padiketan.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Padi Ketan</h4>
+              <?php $row = $padi->fetch_assoc(); ?>
+                <p><?php echo $row['harga']; ?></p>
+              <a href="gambar/gbhketan.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Padi Ketan"><i class="bx bx-dots-horizontal-rounded"></i></a>
+              </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-beras">
+            <img src="gambar/Berasmentik.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Beras Mentik</h4>
+              <?php $row = $beras->fetch_assoc(); ?>
+                <p><?php echo $row['harga']; ?></p>
+              <a href="gambar/Beras_mentik.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Beras Mentik"><i class="bx bx-dots-horizontal-rounded"></i></a>
+              </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-beras">
+            <img src="gambar/Berasketan.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Beras Ketan</h4>
+              <?php $row = $beras->fetch_assoc(); ?>
+                <p><?php echo $row['harga']; ?></p>
+              <a href="gambar/Beras_ketan.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Beras Ketan"><i class="bx bx-dots-horizontal-rounded"></i></a>
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Pertanyaan</h2>
+          <h3>Pertanyaan yang sering ditanyakan</h3>
+        </div>
+
+        <ul class="faq-list">
+
+          <li>
+            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Apa jam operasional penggilingan padi ini? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Jam operasional Kami 07.30-16.00             
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Apa saja jenis produk yang ditawarkan? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Berbagai jenis beras dan dedak
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Bagaimana cara menghubungi layanan pelanggan disini? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Hubungi pada kontak berikut: <a href="#wa">WhatsApp</a>
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Apa saja jenis ukuran kemasan yang tersedia? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Tersedia ukuran 3kg, 5kg, 10kg, dan 25kg
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Bagaimana mekanisme pengantaran beras yang dipesan? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Beras akan diantar sesuai dengan alamat yang telah dimasukkan pada form pesanan             
+              </p>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ======= Pemesanan Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Pemesanan</h2>
+          <h3>Alamat dan<span></span> Pemesanan</h3>
+        </div>
+
+        <div>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.6494858208266!2d110.97922507455124!3d-7.613065875259702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a23c46825069d%3A0xe3e14484ecf9094a!2sSelepan%20Wagah!5e0!3m2!1sid!2sid!4v1716254800096!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Lokasi:</h4>
+                <p>Wagah, RT02 RW03, Popongan, Kec. Karanganyar, Kabupaten Karanganyar, Jawa Tengah 57715</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>WhatsApp:</h4>
+                <p>+62 813 2628 8149</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+            <div class="info">
+            <h4>Form Pemesanan:</h4>
+          </div>
+            <form action="process_form.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama *" required>
+                </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="hp" id="hp" placeholder="No. WhatsApp *" required>
+              </div>
+                <div class="col-md-6 mt-3 form-group">
+                  <select class="form-control" name="jenis" id="jenis" placeholder="Jenis Beras *" data-sb-validations="required">
+                    <option value="" disabled selected>Pilih Jenis Beras *</option>
+                    <option value="1">Beras IR 64</option>
+                    <option value="2">Beras Mentik</option>
+                    <option value="3">Beras Ketan</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mt-3">
+                  <input type="text" class="form-control" name="jumlah" id="jumlah" placeholder="Jumlah (kg) *" required>
+                </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="alamat" rows="5" placeholder="Alamat *" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Pesan Disini</div>
+              </div>
+              <div class="text-center"><button type="submit">Kirim</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Putro Taruno</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://www.instagram.com/putro_taruno?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://wa.me/6281326288149" class="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
